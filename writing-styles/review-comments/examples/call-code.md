@@ -9,6 +9,6 @@
 - **A.** Move it to `OrderProvider`. A means every change to an order is in one place.
 - **B.** Leave it on the screen. B means less code moves, and it moves when a second screen needs it.
 
-**The reviewer's recommendation, not reviewed by Sam: A.** Receipt lists the same rows, so a second caller is likely.
+**The reviewer's recommendation, not decided by Sam: A.** Receipt lists the same rows, so a second caller is likely. Yours to decide.
 
 **How I checked:** made both changes in a worktree. Typecheck and all 640 tests pass either way. Then undone.

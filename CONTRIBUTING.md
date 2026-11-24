@@ -17,7 +17,7 @@ The plugin has two parts, split by who they belong to. A change belongs to exact
 
 **An amendment can change how a step is carried out, never what the step is.** A step that varies by machine, such as posting, names its amendment and gives a plain default. Add a new one only when a machine can't do a step the default way.
 
-**A harvest never changes the plugin.** A lesson about how a review should run goes in the harvest's note as a suggestion, and becomes a pull request here if the owner agrees.
+**A harvest never changes the plugin.** A lesson about how a review should run goes under Plugin suggestions in `local/ledger.md`, and becomes a pull request here if the owner agrees.
 
 **Nothing published names a real person, company, repository or project,** with one exception: [`documentation-examples`](https://github.com/JonathanYeeW/documentation-examples), the public collection whose document types this plugin follows. Examples are set in its PB&J Machine Company. A real name makes a stranger's reviewer follow someone else's rule.
 
@@ -55,7 +55,7 @@ code-review/
 
 ## Keeping a Flow and Its Procedure in Step
 
-Each SOP has a CPF that tells the same story: `sop_set-up.md` and `cpf_setting-up.md`, `sop_review-a-pr.md` and `cpf_reviewing-a-pr.md`, `sop_harvest.md` and `cpf_harvesting.md`. `cpf_code-review.md` is the whole flow.
+Each SOP has a CPF that tells the same story: `sop_set-up.md` and `cpf_setting-up.md`, `sop_review-a-pr.md` and `cpf_reviewing-a-pr.md`, `sop_harvest.md` and `cpf_harvesting.md`, `sop_update-the-wiki.md` and `cpf_updating-the-wiki.md`. `cpf_code-review.md` is the whole flow.
 
 - **A change to a gate, a step or a rule lands in the SOP, its CPF and the whole flow,** in the same change.
 - **A change to what a procedure writes into `local/`** updates the README's tree, and the rule or entry shape in `sop_harvest.md`'s example.

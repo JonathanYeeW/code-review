@@ -1,5 +1,7 @@
 Reviewed `a1b2c3d` against `main` at `f4e5d6c`. This is how I understand the pull request. If it's wrong, start there.
 
+Today, an operator who adds the wrong sandwich to an order has to cancel the whole order and type its name and pickup time again. This pull request lets them take off just that sandwich, and the rest of the order stays as it was.
+
 ## Context
 
 **Where this sits in the journey**
