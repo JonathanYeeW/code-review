@@ -1,5 +1,7 @@
 # Code Review
 
+**Version:** 3.0. Upgrading an install from 2.x: [`migrations/sop_migrate-2-to-3.md`](migrations/sop_migrate-2-to-3.md).
+
 ## What Is Code Review?
 
 Code Review is a set of plain-text procedures an LLM follows to review pull requests, so the user can honestly put their name on a review they didn't write. The reviewer, the LLM following these procedures, does the reading. The user does the understanding and the judging: they understand what the pull request does and stand behind its Calls. The Fixes and Nits belong to the reviewer.
@@ -41,6 +43,9 @@ code-review/
 │   ├── sop_review-a-pr.md           ← three reads, one review, the user's walk and approval
 │   ├── sop_harvest.md               ← what this review taught it
 │   └── sop_update-the-wiki.md       ← a product's docs, brought up to date
+├── migrations/
+│   ├── README.md                    ← index of this directory
+│   └── sop_migrate-2-to-3.md        ← move an install's local/ from 2.x to 3.0
 ├── writing-styles/
 │   ├── README.md                    ← index of this directory
 │   └── review-comments/
@@ -123,3 +128,4 @@ You need an LLM client that can read and write files and run commands, `git`, an
 | `harvest <pull request>` | `procedures/sop_harvest.md`, for a review that wasn't harvested at the time |
 | `update the wiki` | `procedures/sop_update-the-wiki.md` |
 | `push the wiki` | `procedures/sop_update-the-wiki.md`, Phase 4 |
+| `migrate the install` | `migrations/sop_migrate-2-to-3.md`, once, on an install set up with 2.x |
