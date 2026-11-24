@@ -14,6 +14,6 @@
 - **A.** The order stays open and empty, and Submit is disabled. A means the operator keeps the name and pickup time.
 - **B.** The order is cancelled and the screen goes back to the menu. B means the operator starts over.
 
-**Sam's recommendation: A.** "They're usually about to add another sandwich, and retyping the pickup time is what people hate."
+**The reviewer's recommendation, not decided by Sam: A.** An operator who removes the last sandwich is usually about to add another, and keeping the order keeps its name and pickup time. Yours to decide.
 
 **How I checked:** traced from the ✕ on the last row through to the kitchen's response.

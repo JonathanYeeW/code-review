@@ -17,7 +17,7 @@ The plugin has two parts, split by who they belong to. A change belongs to exact
 
 **An amendment can change how a step is carried out, never what the step is.** A step that varies by machine, such as posting, names its amendment and gives a plain default. Add a new one only when a machine can't do a step the default way.
 
-**A harvest never changes the plugin.** A lesson about how a review should run goes in the harvest's note as a suggestion, and becomes a pull request here if the owner agrees.
+**A harvest never changes the plugin.** A lesson about how a review should run goes under Plugin suggestions in `local/ledger.md`, and becomes a pull request here if the owner agrees.
 
 **Nothing published names a real person, company, repository or project,** with one exception: [`documentation-examples`](https://github.com/JonathanYeeW/documentation-examples), the public collection whose document types this plugin follows. Examples are set in its PB&J Machine Company. A real name makes a stranger's reviewer follow someone else's rule.
 
@@ -29,6 +29,7 @@ code-review/
 ├── CONTRIBUTING.md       # This file
 ├── docs/                 # For a person to read: what happens and why
 ├── procedures/           # For an LLM to follow: what to do, in order
+├── migrations/           # For an LLM to follow once: moving local/ to a new major version
 ├── writing-styles/       # How a review reads. The examples are the style
 └── local/                # Git-ignored, and its own git repository: one install
 ```
@@ -55,7 +56,7 @@ code-review/
 
 ## Keeping a Flow and Its Procedure in Step
 
-Each SOP has a CPF that tells the same story: `sop_set-up.md` and `cpf_setting-up.md`, `sop_review-a-pr.md` and `cpf_reviewing-a-pr.md`, `sop_harvest.md` and `cpf_harvesting.md`. `cpf_code-review.md` is the whole flow.
+Each SOP has a CPF that tells the same story: `sop_set-up.md` and `cpf_setting-up.md`, `sop_review-a-pr.md` and `cpf_reviewing-a-pr.md`, `sop_harvest.md` and `cpf_harvesting.md`, `sop_update-the-wiki.md` and `cpf_updating-the-wiki.md`. `cpf_code-review.md` is the whole flow.
 
 - **A change to a gate, a step or a rule lands in the SOP, its CPF and the whole flow,** in the same change.
 - **A change to what a procedure writes into `local/`** updates the README's tree, and the rule or entry shape in `sop_harvest.md`'s example.
@@ -68,6 +69,10 @@ Each SOP has a CPF that tells the same story: `sop_set-up.md` and `cpf_setting-u
 **One real run.** A change to a procedure runs on a real pull request before it's relied on, with its own `local/`, posting nothing until the user says so. Report the comment count and length beside the last review's. A cold read shows whether the words are clear. Only a run shows whether a review is any good.
 
 **A blind rerun for what reads find.** To test whether reads still catch what they should, rerun on a commit that already has a review, from a description and a memory with that review kept out. Whoever writes the review must not have seen the earlier one.
+
+## Versions
+
+**A major version changes where `local/` keeps things,** and ships a migration SOP in `migrations/` that moves an install from the version before, losing nothing it knows. **A minor version changes procedures, docs or the style only,** and an install pulls it with nothing to move. The README names the current version, and a release is tagged `<major>.<minor>.<patch>`, with no `v`, when it merges, such as `3.0.0`.
 
 ## Review and Acceptance
 

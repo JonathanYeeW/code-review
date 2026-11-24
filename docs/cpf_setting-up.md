@@ -1,78 +1,86 @@
 # Core Product Flow — A Fresh Clone to Ready for a Real Review
 
 **Created:** 2026-11-06
-**Updated:** 2026-11-06
-**Context:** Starts when the user has put the plugin where their LLM can read it, and says `set up the reviewer`. Ends when the user says the reviewer is ready for a real pull request.
+**Updated:** 2026-11-24
+**Context:** Starts when the user has put the plugin where their LLM can read it, and says `set up the reviewer`. Ends when the install is ready and the user is told what to run first.
 
 ## Summary
 
-This flow is Phases 1 and 2 of `cpf_code-review.md`, in detail, seen from the user's side. The reviewer finds out where it's working and what's already written down, then learns the user from stacks of small pull requests until the user is comfortable handing it a real one. Read it before setting up, or before bringing the reviewer to a new company. The steps are `../procedures/sop_set-up.md`.
+This flow is Phase 1 of `cpf_code-review.md`, in detail, seen from the user's side. The reviewer finds out which products it reviews and where their docs live, finds what's already written down, and records how this machine differs. Read it before setting up, or before bringing the reviewer to a new company. The steps are `../procedures/sop_set-up.md`.
 
 ## Flow at a Glance
 
 ```
-PHASE 1: SET UP (the user answers, the reviewer records)
+PHASE 1: WHERE IT WORKS (the user answers, the reviewer records)
 
-  1. The user says which repositories this install covers
-  2. The reviewer finds the documentation and standards that already exist
-  3. It decides who controls each source
-  4. The user adopts any rules worth keeping
-       → nothing written down anywhere: the install builds its own
-  5. The user says how this machine differs, if it does
+  1. The user names the products, repositories and docs
+  2. A seed from another install, or start empty
+  3. The install is created
 
-        ~~~~~~~~ handoff to teaching ~~~~~~~~
+        ~~~~~~~~ handoff to the search ~~~~~~~~
 
-PHASE 2: TEACH (the reviewer guesses, the user answers)
+PHASE 2: FIND WHAT EXISTS (the reviewer, then the user)
 
-  6. The reviewer reads the code in the order it runs
-  7. It opens a stack of five one-change pull requests, on the user's word
-       → a change the person using the product would notice: written up, not made
-  8. The user answers each one
-  9. The answers are harvested
-       → loops 6–9 until the user is comfortable
-  10. The user says the reviewer is ready
+  4. The reviewer finds the docs and standards that already exist
+  5. It decides who controls each source
+  6. The user confirms the list, and adopts any rules worth keeping
+       → nothing written down anywhere: the install starts empty
+
+        ~~~~~~~~ handoff to the machine ~~~~~~~~
+
+PHASE 3: HOW THIS MACHINE DIFFERS (the user)
+
+  7. Posting, approving and reads, each with a default
+
+        ~~~~~~~~ handoff to the user ~~~~~~~~
+
+PHASE 4: HAND OVER
+
+  8. The install is ready: update the wiki, then a first review
 ```
 
 ---
 
-## Phase 1: Set Up
+## Phase 1: Where It Works
 
-The reviewer works out where it is. This runs once per install, and an install usually matches a company or a set of personal projects.
+This runs once per install, and an install usually matches a company or a set of personal projects.
 
-**Step 1: The user says which repositories this install covers.** One install can cover many, since a company's standards usually apply across all of them.
+**Step 1: The user names the products, repositories and docs.** One install can cover many products, and a product can span more than one repository. The user says where each product's docs live, if they know.
 
-**Step 2: The reviewer finds the documentation and standards that already exist.** It looks in each repository for a docs folder, contributing guides, a style guide and lint config, and follows anything they route to elsewhere, such as a team wiki. The user adds anything it missed.
+**Step 2: A seed from another install, or start empty.** A seed, such as the user's install on another machine, brings its long-term coding standards and system knowledge. Short-term memory always starts empty, since what was in flight belongs to the other install.
 
-**Step 3: It decides who controls each source.** That decides where long-term memory lives, and it depends on the place.
-
-- A source the user controls becomes the long-term memory, and harvests commit to it directly.
-- A source someone else controls is read but never changed, and the install keeps its own memory beside it.
-- The reviewer records each decision in `sources.md`, where the user can overrule it.
-
-**Step 4: The user adopts any rules worth keeping.** The reviewer lists what it found, and the user names what they want, so an adopted rule becomes the reviewer's own. With nothing written down anywhere, the install starts empty and grows from the user's answers.
-
-**Step 5: The user says how this machine differs, if it does.** Each difference is an amendment, such as a reviewer account for posting, or an LLM client that can't run independent agents. With none, the plain defaults apply, and reviews post from the user's own GitHub sign-in.
+**Step 3: The install is created.** `local/` is made at the plugin's root, with a README in each directory and an empty ledger, as its own git repository with no remote.
 
 ---
 
-## Phase 2: Teach
+## Phase 2: Find What Exists
 
-The reviewer learns the user from their reactions, and small pull requests are the cheapest place to get them. Each one is a guess the user can judge in a minute.
+**Step 4: The reviewer finds the docs and standards that already exist.** It looks in each repository for a docs folder, contributing guides, a style guide and lint config, and follows anything they route to elsewhere, such as a team wiki.
 
-**Step 6: The reviewer reads the code in the order it runs.** It starts at the entry point and stops at each thing it would change, keeping its place so the next stack carries on from there.
+**Step 5: It decides who controls each source.** A source is the user's when they own it or work in it alone, and not when a team reviews changes to it. Where it can't tell, it isn't.
 
-**Step 7: It opens a stack of five one-change pull requests, on the user's word.** The reviewer lists its guesses first, since opening them is public. They're stacked on each other, on code that's already merged, and each is one small guess: "I'd make this change, what do you think?"
+**Step 6: The user confirms the list, and adopts any rules worth keeping.** They correct who controls what and add anything the search missed.
 
-- One change can touch more than one file, such as a utility and its test, or a renamed term everywhere it appears.
-- One change per pull request, because the user's reaction has to say which change it was about.
-- Only how code is arranged changes. A change the person using the product, or a client of the server, would notice is written up and named for the user, not made, because it needs a real pull request. So is one where a standard and a primary source disagree.
-- These are real pull requests in a real repository, so teammates can see them, reviewers may be notified, and merging may deploy. An amendment can keep them somewhere quieter.
+- Each product becomes a row in `local/product/README.md`: its repositories and checkouts, where its docs live, and how a docs change lands there.
+- Each source the user can't change becomes a References row, read but never changed, with any rule adopted from it.
 
-**Step 8: The user answers each one.** They correct it, close it or say to merge it, and say why if it isn't obvious. A correction is made on its branch and handed back.
+---
 
-**Step 9: The answers are harvested.** `cpf_harvesting.md`. Corrections become short-term memory, and ones that come back become promotion questions. The sign it's working is fewer new promotion questions from one stack to the next.
+## Phase 3: How This Machine Differs
 
-**Step 10: The user says the reviewer is ready.** It's their call, with those questions to go on.
+**Step 7: Posting, approving and reads, each with a default.** Each difference is an amendment, which changes how a step is carried out and never what the step is.
+
+- **Posting:** a separate reviewer account, or by default the user's own GitHub sign-in.
+- **Approving:** a reviewer account approves on the user's word, or by default the user approves.
+- **Independent reads:** how this LLM client runs them, or by default subagents.
+
+Making a reviewer account is the user's to do.
+
+---
+
+## Phase 4: Hand Over
+
+**Step 8: The install is ready: update the wiki, then a first review.** The user is told to run `update the wiki` for a product whose docs haven't been synced, so the first review starts from the product as it is, then `review this PR <link>`. A small pull request is a good first one.
 
 ---
 
@@ -80,9 +88,5 @@ The reviewer learns the user from their reactions, and small pull requests are t
 
 | Symptom | Where it died | What it means |
 |---|---|---|
-| The user can't say which change they're reacting to | Step 7 | More than one change went in a pull request |
-| A setup pull request changed what's on screen | Step 7 | It should have been written up, not made |
-| A harvest changed a team's docs | Step 3 | A source was recorded as the user's when it isn't |
-| Teammates were surprised by a stack | Step 7 | The stack went in a shared repository with no word to them, or no amendment to keep it quieter |
-| Stacks keep coming back with the same corrections | Step 9 | The answers weren't harvested |
-| The first real review reads like a linter | Step 10 | The reviewer was handed a real pull request before it knew the user |
+| A harvest or wiki update tried to change a team's docs | Step 5 | A source was recorded as the user's when it isn't |
+| A plugin update overwrites something the user changed | Step 7 | The change was made to the plugin instead of an amendment |
