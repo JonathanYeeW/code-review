@@ -25,7 +25,7 @@ Ask the user, in one message:
 
 Then create the install, with no further input:
 
-1. Create `local/` at this plugin's root, as the directory tree in `README.md` shows, with a README in each directory, and `git init` inside it. It never gets a remote. `local/ledger.md` starts with three empty sections: Open reviews (pull request, head reviewed, ball, next), Waiting to push (repository, branch, what) and Plugin suggestions.
+1. Create `local/` at this plugin's root, as the directory tree in `README.md` shows, with a README in each directory, and `git init` inside it. It never gets a remote. `local/ledger.md` starts with four empty sections: Open reviews (pull request, head reviewed, ball, next), Docs behind (pull request, product), Waiting to push (repository, branch, what) and Plugin suggestions.
 2. With a seed, copy its `coding-standards/long-term/` and `system/` in whole. Starting empty, `coding-standards/long-term/` gets `writing/`, `checking/` and `languages/`, each with a README, and the harvest's example shows a rule's shape. `coding-standards/short-term.md` starts empty either way, since what was in flight belongs to the other install.
 3. Commit it: `git -C <plugin>/local add -A && git -C <plugin>/local commit -m "start the install"`.
 

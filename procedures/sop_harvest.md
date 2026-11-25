@@ -34,9 +34,9 @@ No input needed at this step. Read `local/amendments/README.md` first, and use t
 
 No input needed at this step.
 
-1. **Short-term.** Update `local/coding-standards/short-term.md` in the shape the example shows. Remove any entry that hasn't been seen in about 20 harvests, counted by `git -C local log --grep '^harvest'` since it last changed.
+1. **Short-term.** Update `local/coding-standards/short-term.md` in the shape the example shows. Remove any entry that hasn't been seen in about 20 harvested pull requests since it last changed, counting the distinct pull requests `git -C local log --grep '^harvest'` names, not the commits.
 2. **Long-term.** Write a promotion or an exception into `local/coding-standards/long-term/`, in the folder and shape its `CONTRIBUTING.md` says, or, without one, as the example shows, and remove the short-term entry. Update the folder's README. Never change `local/system/` or a References row's source: a lesson about how a system is built goes in the note.
-3. **The product's docs.** If the pull request has merged, run `sop_update-the-wiki.md` for its product. If not, the next update reaches it.
+3. **The product's docs.** If the pull request has merged, run `sop_update-the-wiki.md` for its product. If not, add a row under Docs behind in `local/ledger.md`, adding the section if the ledger has none, so `review status` says when it merges.
 4. **The ledger.** Remove the review's row from `local/ledger.md`. A lesson about how a review runs, or a comment that shows the style somewhere the plugin's examples don't, goes under Plugin suggestions, never into the plugin.
 5. **Commit `local/`,** in its own repository, with a message starting `harvest` and naming the pull request. It has no remote.
 
