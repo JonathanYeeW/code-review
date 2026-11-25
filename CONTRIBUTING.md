@@ -72,7 +72,7 @@ Each SOP has a CPF that tells the same story: `sop_set-up.md` and `cpf_setting-u
 
 ## Versions
 
-**A major version changes where `local/` keeps things,** and ships a migration SOP in `migrations/` that moves an install from the version before, losing nothing it knows. **A minor version changes procedures, docs or the style only,** and an install pulls it with nothing to move. The README names the current version, and a release is tagged `<major>.<minor>.<patch>`, with no `v`, when it merges, such as `3.0.0`.
+**A major version changes where `local/` keeps things,** and ships a migration SOP in `migrations/` that moves an install from the version before, losing nothing it knows. **A minor version changes procedures, docs or the style only,** and an install pulls it with nothing to move. **A patch fixes what a real run showed wrong or unclear,** with nothing to move. The README names the current version, and a release is tagged `<major>.<minor>.<patch>`, with no `v`, when it merges, such as `3.0.0`.
 
 ## Review and Acceptance
 

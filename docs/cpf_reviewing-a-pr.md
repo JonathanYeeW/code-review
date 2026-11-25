@@ -73,7 +73,7 @@ The reviewer works alone, and changes nothing that anyone else can see.
 
 - **What's changing:** the pull request and its ticket, since a recorded decision is a product call already made.
 - **What's known:** the product's docs, the coding standards and the system knowledge for the areas the pull request touches, and any References row that covers this repository.
-- **The brief** names each document opened and each skipped, with why. Every read starts from it, and the user sees it at step 9.
+- **The brief** names the ticket and where its decisions are written, and each document opened and each skipped, with why. Every read starts from it, the user sees it at step 9, and each re-review adds the decisions made since.
 
 **Step 3: Three independent reads.** Each read has its own copy of the code and sees nothing of the others' work, because separate reads find different things. Each runs the checks itself, and reads the diff in the order the code runs, from where the person using the product starts.
 
@@ -100,7 +100,7 @@ This phase decides how long the review is. Reads find everything they can, and t
 
 The number of reads that found a Fix or Call doesn't decide whether it goes out. Everything else is dropped, with three exceptions: up to five Nits per pull request, a Question that bears on the test, and one Fix listing the tests a standard says new behavior should have. Dropped findings, and problems this change didn't cause, are listed for the user at step 9.
 
-**Step 6: One review written, every Call left to the author.** It follows `writing-styles/review-comments/`: a body that opens with what the pull request does, in product language, and one comment per finding. Every Call is left to the author, with the reviewer's recommendation labeled as the reviewer's, such as "The reviewer's recommendation, not decided by Sam."
+**Step 6: One review written, every Call left to the author.** It follows `writing-styles/review-comments/`: a body that opens with a whiteboard paragraph in the reviewer's own words, from the code it read, never the description's, and one comment per finding. Every Call is left to the author, with the reviewer's recommendation labeled as the reviewer's, such as "The reviewer's recommendation, not decided by Sam."
 
 ---
 
@@ -110,7 +110,7 @@ The user's name goes on the review, so they understand it before it's posted. Th
 
 **Step 7: "The review is ready. Process it?"** The review waits for the user, who may be away when it's done.
 
-**Step 8: What the pull request does, until the user understands it.** The reviewer shows the body's opening paragraph, and the user says it's understood, or asks until it is.
+**Step 8: What the pull request is for, until the user understands it.** The reviewer shows the body's whiteboard paragraph, and the user says it's understood, or asks until it is. Every walk, in a re-review and at the approval too, opens with that paragraph, so a user coming back cold knows what the review is about.
 
 **Step 9: The Calls, acknowledged as real and correct.** Each Call comes with the problem as the reviewer sees it, the decision the author has to make, the reviewer's recommendation and the alternative. The user isn't choosing, since the author decides. They're confirming each Call is real and correct, because a Call can block a pull request. Then, in a line each: the counts, what was opened and skipped, what this change didn't cause, and each dropped finding.
 
@@ -124,24 +124,24 @@ The author owns the code. The reviewer owns its review, and never edits the code
 
 **Step 11: The author pushes, and the user says re-review.** The author applies the Fixes and Nits, decides each Call and replies to the Questions. The user says `re-review <pull request>`.
 
-**Step 12: The push is checked like a new diff.** A response commit can be wrong in the same ways the first one was. One fresh read covers what changed and every reply, from the brief, without seeing the earlier review.
+**Step 12: The push is checked like a new diff.** A response commit can be wrong in the same ways the first one was. The reviewer runs the checks, then one fresh read covers what changed and every reply, from the brief, without seeing the earlier review.
 
 - Every reply is a claim, and each place it says changed is opened.
 - A reason disproved anywhere is searched for in every copy, docs and descriptions included.
 - Every document the push writes or leaves is read against the code, and every result the author reports is held to the standards.
 
-**Step 13: The threads are worked through.** A thread resolves only when the code meets its comment, or a Question's thread says what happened. An answer alone never resolves one.
+**Step 13: The threads are worked through.** A thread resolves only when the code meets its comment, or a Question's thread says what happened. An answer alone never resolves one, and a reply that relays the user's decision, or a Question the author can't answer, waits for the user's own word.
 
 - A change that doesn't match its comment gets a reply, and stays open. A new defect gets a new thread, and a new Nit only if the review posted fewer than five.
-- When a change rests on a false claim of the review's, the comment is corrected on its thread.
+- When a change rests on a false claim of the review's, or the review's own suggestion has a defect, it's corrected on its thread, whatever the Nit count.
 
-**Step 14: The user processes the re-review and says to post it.** "#<number> has a new push. Process the re-review?" Then one message: what the pull request does now, where it changed, how each Call landed and whether the code does what the author decided, any new Calls, and the threads resolved and left open. The loop runs until every thread is resolved or left open on the user's word.
+**Step 14: The user reads the re-review and says to post it.** One message, ready when the user comes back: the whiteboard paragraph, what the pull request does now where it changed, how each Call landed and whether the code does what the author decided, any new Calls, anything waiting on the user's word, the count of threads resolved, and a line for each thread left open. The loop runs until every thread is resolved or left open on the user's word.
 
 ---
 
 ## Phase 5: Approve
 
-**Step 15: The user gives the go or the no-go.** The reviewer asks once it thinks the pull request is good to go, with the commit it checked, what an approval would leave out, and any Question still open. The user reads the code and decides, or sends what still needs changing back through Phase 4.
+**Step 15: The user gives the go or the no-go.** The reviewer asks once it thinks the pull request is good to go, with the whiteboard paragraph, the commit it checked, what an approval would leave out, and any Question still open. The user reads the code and decides, or sends what still needs changing back through Phase 4.
 
 - The commit on GitHub is compared with what was checked before anything is approved. The user approves it themselves, unless an amendment lets the reviewer's account approve on their word.
 - If the author merged first, nothing is approved. The reviewer checks what merged and says what it leaves out.

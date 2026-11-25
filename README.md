@@ -1,6 +1,6 @@
 # Code Review
 
-**Version:** 3.0. Upgrading an install from 2.x: [`migrations/sop_migrate-2-to-3.md`](migrations/sop_migrate-2-to-3.md).
+**Version:** 3.0.1. Upgrading an install from 2.x: [`migrations/sop_migrate-2-to-3.md`](migrations/sop_migrate-2-to-3.md).
 
 ## What Is Code Review?
 
@@ -55,7 +55,7 @@ code-review/
 │           └── README.md            ← index of this directory
 └── local/                           ← git-ignored; the install, never published
     ├── README.md                    ← index of this directory
-    ├── ledger.md                    ← what's open, and who has the ball
+    ├── ledger.md                    ← what's open, who has the ball, and docs waiting on a merge
     ├── coding-standards/            ← how the user writes code
     │   ├── README.md                ← index, and references the user can't change
     │   ├── short-term.md            ← in flight

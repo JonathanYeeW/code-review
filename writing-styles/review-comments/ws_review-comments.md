@@ -20,8 +20,8 @@ A review comment says what's wrong in product language, anchored to the code, so
 - **Asks a Question without stating an answer**: "Can the kitchen receive an empty order?", not "the kitchen receives an empty order, should it?" Under it: What's happening, What I couldn't check, and How to try it.
 - **Says how it was checked, in a line or two.** Every Fix and Call ends with How I checked.
 - **Keeps a Nit to one or two lines.**
-- **Opens the body, after a line naming the commit reviewed, with a whiteboard paragraph:** the problem the person has today, and how this pull request changes it, in a few sentences with no code names.
-- **Then restates the pull request as the reviewer understood it, like the top of a PR description, at product level:** Context, with where this sits in the journey and Terms, then Summary, as bullets of what's changed for the person. A pull request nothing changes on screen for says so in a line.
+- **Opens the body, after a line naming the commit reviewed, with a whiteboard paragraph** in the reviewer's own words, from the code it read, never the description's: the problem the person has today, and how this pull request changes it, in a few sentences with no code names.
+- **Then sets out the pull request as the reviewer understood it, at product level, in the reviewer's own words:** Context, with where this sits in the journey and Terms, then Summary, as bullets of what's changed for the person. A pull request nothing changes on screen for says so in a line.
 - **Ends the body with any overall Questions.** Fixes, Nits and Calls are never summarized there, because the comments hold them.
 
 **What it leaves out**

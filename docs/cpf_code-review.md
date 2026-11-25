@@ -84,7 +84,7 @@ This is what the plugin is for. The detail is in `cpf_reviewing-a-pr.md`, and th
 
 **Step 10: "Calls are right, post it."** Nothing is posted without the user's word. An amendment says how posting works on this machine. The reviewer never messages another session, so the user tells the author.
 
-**Step 11: The author pushes, and the reviewer checks it like a new diff.** One fresh read covers the push, every reply is checked as a claim, and the user processes the re-review before it's posted. A thread resolves only when the code meets its comment. An answer alone never resolves one.
+**Step 11: The author pushes, and the reviewer checks it like a new diff.** One fresh read covers the push, every reply is checked as a claim, and the user reads the re-review, which opens with what the pull request is for, before it's posted. A thread resolves only when the code meets its comment. An answer alone never resolves one.
 
 **Step 12: The reviewer says it's ready, and the user gives the go or the no-go.** The reviewer names anything an approval would leave out. Nothing merges on the reviewer's word alone.
 

@@ -28,7 +28,7 @@ A 2.x install has a `local/sources.md`. A 3.0 install has `local/product/README.
 | `local/amendments/calls.md` | Gone. Every Call is left to the author, by default |
 | `local/amendments/build-session.md` | Gone. The reviewer never messages another session |
 | `local/examples/` | Gone. Each example worth keeping is a plugin suggestion in the ledger |
-| — | `local/ledger.md`: open reviews, waiting to push, plugin suggestions |
+| — | `local/ledger.md`: open reviews, docs behind, waiting to push, plugin suggestions |
 
 ---
 
@@ -48,7 +48,7 @@ No input needed until the gate.
 
 No input needed at this step.
 
-1. **Create 3.0's folders,** as the README's tree shows, each with a README: `system/`, `product/`, and `coding-standards/long-term/writing/`, `checking/` and `languages/`. Create `local/ledger.md` with its three sections, and the open reviews as rows.
+1. **Create 3.0's folders,** as the README's tree shows, each with a README: `system/`, `product/`, and `coding-standards/long-term/writing/`, `checking/` and `languages/`. Create `local/ledger.md` with its four sections, and the open reviews as rows.
 2. **Move each file** as Phase 1 mapped it. A rule keeps its words; only where it lives changes. Rewrite each link it holds to its new path.
 3. **Write each README:** one row per file or folder, and the References section in `coding-standards/`, `system/` and `product/`.
 4. **Remove what's gone** only once everything it held has a home: `sources.md`, `product/short-term.md`, `product/long-term/`, `held-back.md`, `teaching.md`, `examples/`, and the retired amendments.

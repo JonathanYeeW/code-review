@@ -24,7 +24,7 @@ PHASE 2: WRITE (the reviewer, on its own)
 
   4. Short-term and long-term standards are updated
   5. The product's docs, if the pull request merged
-       → not merged: the next update reaches it
+       → not merged: a Docs behind row in the ledger, until it merges
   6. The ledger, and a commit
 
         ~~~~~~~~ handoff to the user ~~~~~~~~
@@ -56,9 +56,9 @@ The reviewer works out what changed in what it knows, without asking. The one ex
 
 The reviewer makes the changes itself, and the history in `local/` is what keeps them reversible.
 
-**Step 4: Short-term and long-term standards are updated.** A promotion is written as a rule in the long-term folder, its README index is updated, and the short-term entry is removed. An entry that hasn't been seen in about 20 harvests drops off. A source the user doesn't control, and the system knowledge, are never changed: a lesson about how a system is built goes in the note.
+**Step 4: Short-term and long-term standards are updated.** A promotion is written as a rule in the long-term folder, its README index is updated, and the short-term entry is removed. An entry that hasn't been seen in about 20 harvested pull requests drops off. A source the user doesn't control, and the system knowledge, are never changed: a lesson about how a system is built goes in the note.
 
-**Step 5: The product's docs, if the pull request merged.** The harvest runs `update the wiki` for the product, as `cpf_updating-the-wiki.md` says. If it hasn't merged, the next update reaches it.
+**Step 5: The product's docs, if the pull request merged.** The harvest runs `update the wiki` for the product, as `cpf_updating-the-wiki.md` says. If it hasn't merged, a Docs behind row in the ledger waits for the merge, and `review status` says when it lands.
 
 **Step 6: The ledger, and a commit.** The review's row comes off `local/ledger.md`. A lesson about how a review runs, or a comment that shows the style somewhere the plugin's examples don't, goes under Plugin suggestions, never into the plugin. Then `local/` is committed.
 

@@ -66,7 +66,7 @@ PHASE 4: PUSH (on the user's word)
 
 **Step 5: Each fact is written, and the synced commit moves forward.** Each goes into the doc it belongs in, shaped against its type, and each README it touches is updated.
 
-**Step 6: A commit where the docs live, and a ledger row.** Docs in a repository are committed on a branch, and get a Waiting to push row in `local/ledger.md`. Docs kept in `local/` are committed there. Docs with no git, such as a hosted wiki, are written in place.
+**Step 6: A commit where the docs live, and a ledger row.** Docs in a repository are committed on a branch, and get a Waiting to push row in `local/ledger.md`. Any Docs behind row the update now covers comes off. Docs kept in `local/` are committed there. Docs with no git, such as a hosted wiki, are written in place.
 
 **Step 7: One message, and any questions.** What changed in a line each, the branch, and each question. The user answers each in a sentence, and nothing else waits on it.
 

@@ -44,7 +44,7 @@ Sort what's kept:
 No input needed at this step.
 
 1. Write each fact into the doc it belongs in, shaped against its type in `documentation-examples`, or as the install's own docs standard says if `local/system/` has one. Update each README the change touches.
-2. Move the synced-through commit in the docs' README forward.
+2. Move the synced-through commit in the docs' README forward, and remove each Docs behind row in `local/ledger.md` whose pull request it now covers.
 3. Commit where the docs live:
    - In a git repository: on the branch, with a `docs:` message naming what merged. Add or update its row under Waiting to push in `local/ledger.md`.
    - In `local/`: commit `local/` with a message starting `wiki`.
